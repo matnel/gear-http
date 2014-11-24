@@ -31,48 +31,33 @@
 
     <script type="text/javascript">
 
-      $('button').click(function  () {
-        if ($(this).html()=='On') {
-          $(this).html('Off');
-          $(this).removeClass('btn-default');
-          $(this).addClass('btn-primary');
+      $('button').click(function() {
 
-          var $url = "txt.php";
-
-          var txt = '';
-
-          $.each( $('button'), function(i, nappula) {
-            var html = $(nappula).html();
-            var id = $(nappula).attr('id');
-            txt += id + ': ' + html + '\r\n';
-          });
-
-          console.log(txt);
-          $.post("txt.php",{suggest:txt},function(result){
-          // $("span").html(result);
-          });
-
+        var next = "";
+        if( $(this).html() == 'On' ) {
+          next = "Off";
         } else {
-          $(this).html('On');
-          $(this).removeClass('btn-primary');
-          $(this).addClass('btn-default');
+          next = "On";
+        }
 
-          var url = "txt.php";
+        $(this).html( next );
 
-          var txt = '';
-          $.each( $('button'), function(i, nappula) {
-            var html = $(nappula).html();
-            var id = $(nappula).attr('id');
-            txt += id + ': ' + html + '\r\n';
-          } );
+        $(this).toggleClass('btn-primary');
 
-          console.log(txt);
+        var $url = "txt.php";
 
-          $.post("txt.php",{suggest:txt},function(result){
-            // $("span").html(result);
-          });
+        var txt = '';
 
-        })
+        $.each( $('button'), function(i, nappula) {
+          var html = $(nappula).html();
+          var id = $(nappula).attr('id');
+          txt += id + ': ' + html + '\r\n';
+        });
+
+        console.log(txt);
+        $.post("txt.php",{suggest:txt}, $.noop );
+
+      });
 
       </script>
   </body>
