@@ -63,14 +63,13 @@
             html = $(nappula).html();
             id = $(nappula).attr('id');
             txt += id + ': ' + html + '\r\n';
-          );
-            console.log(txt);
+          } );
 
-            $.post("txt.php",{suggest:txt},function(result){
+          console.log(txt);
+
+          $.post("txt.php",{suggest:txt},function(result){
             // $("span").html(result);
-            });
-
-      	 };
+          });
 
         })
 
