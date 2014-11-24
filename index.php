@@ -3,6 +3,7 @@
   <head>
     <title>Wearable control</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta charset="utf-8" />
   </head>
 
@@ -27,7 +28,7 @@
       </tr>
     </table>
 
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
     <script type="text/javascript">
 
       $('button').click(function  () {
