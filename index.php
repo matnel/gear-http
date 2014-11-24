@@ -44,8 +44,6 @@
 
         $(this).toggleClass('btn-primary');
 
-        var $url = "txt.php";
-
         var txt = '';
 
         $.each( $('button'), function(i, nappula) {
@@ -54,8 +52,8 @@
           txt += id + ': ' + html + '\r\n';
         });
 
-        console.log(txt);
-        $.post("txt.php",{suggest:txt}, $.noop );
+        var url = "txt.php";
+        $.post( url ,{suggest:txt}, $.noop );
 
       });
 
