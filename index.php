@@ -36,13 +36,14 @@
           $(this).html('Off');
           $(this).removeClass('btn-default');
           $(this).addClass('btn-primary');
-          $url = "txt.php";
 
-          txt = '';
+          var $url = "txt.php";
+
+          var txt = '';
 
           $.each( $('button'), function(i, nappula) {
-            html = $(nappula).html();
-            id = $(nappula).attr('id');
+            var html = $(nappula).html();
+            var id = $(nappula).attr('id');
             txt += id + ': ' + html + '\r\n';
           });
 
@@ -56,12 +57,12 @@
           $(this).removeClass('btn-primary');
           $(this).addClass('btn-default');
 
-          $url = "txt.php";
+          var url = "txt.php";
 
-          txt = '';
+          var txt = '';
           $.each( $('button'), function(i, nappula) {
-            html = $(nappula).html();
-            id = $(nappula).attr('id');
+            var html = $(nappula).html();
+            var id = $(nappula).attr('id');
             txt += id + ': ' + html + '\r\n';
           } );
 
