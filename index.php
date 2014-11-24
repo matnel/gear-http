@@ -1,10 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wearable control</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
+<meta charset="utf-8" />
+</head>
 <body>
 
 <table style="width:100%">
   <tr>
-    <td>Gear 1</td>	
+    <td>Gear 1</td>
     <td><button type="button" id="1" class="btn btn-default">On</button></td>
   </tr>
   <tr>
@@ -19,14 +24,13 @@
     <td>Gear 4</td>
     <td><button type="button"  id="4" class="btn btn-default">On</button></td>
   </tr>
-  <span></span>
 </table>
 
 
 
 
 
-             
+
       <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
       <script type="text/javascript">
 
@@ -36,7 +40,7 @@
       	$(this).removeClass('btn-default');
       	$(this).addClass('btn-primary');
         $url = "txt.php";
-		
+
 		txt = '';
 		$.each( $('button'), function(i, nappula) {
 			html = $(nappula).html();
@@ -44,13 +48,13 @@
         txt += id + ': ' + html + '\r\n';
 
 });
-        
+
         console.log(txt);
         $.post("txt.php",{suggest:txt},function(result){
      // $("span").html(result);
 
     });
-      	
+
       	}
       	 else{
       	 	$(this).html('On');
@@ -62,17 +66,18 @@
 			html = $(nappula).html();
 			id = $(nappula).attr('id');
         txt += id + ': ' + html + '\r\n';
-        
+
 		});
         console.log(txt);
         $.post("txt.php",{suggest:txt},function(result){
-          
+
      // $("span").html(result);
     });
-        
+
       	 };
-      	
+
       })
 
       </script>
 </body>
+</html>
