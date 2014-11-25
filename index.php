@@ -12,19 +12,19 @@
     <table style="width:100%">
       <tr>
         <td>Gear 1</td>
-        <td><button type="button" id="1" class="btn btn-default">On</button></td>
+        <td><button type="button" id="1" class="btn btn-default">Off</button></td>
       </tr>
       <tr>
         <td>Gear 2</td>
-        <td><button type="button"  id="2" class="btn btn-default">On</button></td>
+        <td><button type="button"  id="2" class="btn btn-default">Off</button></td>
       </tr>
       <tr>
         <td>Gear 3</td>
-        <td><button type="button"  id="3" class="btn btn-default">On</button></td>
+        <td><button type="button"  id="3" class="btn btn-default">Off</button></td>
       </tr>
        <tr>
         <td>Gear 4</td>
-        <td><button type="button"  id="4" class="btn btn-default">On</button></td>
+        <td><button type="button"  id="4" class="btn btn-default">Off</button></td>
       </tr>
     </table>
 
