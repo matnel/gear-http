@@ -33,11 +33,9 @@
 
       $('button').click(function() {
 
-        var next = "";
+        var next = "On";
         if( $(this).html() == 'On' ) {
           next = "Off";
-        } else {
-          next = "On";
         }
 
         $(this).html( next );
@@ -46,16 +44,18 @@
 
         var $url = "txt.php";
 
-        var txt = '';
+        var txt = [];
 
         $.each( $('button'), function(i, nappula) {
-          var html = $(nappula).html();
-          var id = $(nappula).attr('id');
-          txt += id + ': ' + html + '\r\n';
+          var html = $(nappula).html() == "On";
+          var id = parseInt( $(nappula).attr('id') ) - 1;
+          txt[ id ] = html;
         });
 
+       txt = JSON.stringify( txt );
+
         console.log(txt);
-        $.post("txt.php",{suggest:txt}, $.noop );
+        $.post("txt.php",{suggest:txt}, function(r) {console.log(r);} );
 
       });
 
