@@ -42,8 +42,6 @@
 
         $(this).toggleClass('btn-primary');
 
-        var $url = "txt.php";
-
         var txt = [];
 
         $.each( $('button'), function(i, nappula) {
